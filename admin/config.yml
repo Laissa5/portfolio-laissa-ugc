@@ -1,0 +1,66 @@
+# Painel de edição do portfólio (Decap CMS)
+# Login com GitHub. Cada "Publicar" grava no GitHub e o Netlify atualiza o site em ~1 minuto.
+backend:
+  name: github
+  repo: Laissa5/portfolio-laissa-ugc
+  branch: main
+  commit_messages:
+    update: "Atualiza {{slug}} pelo painel"
+    uploadMedia: "Envia {{path}} pelo painel"
+
+local_backend: true
+locale: pt
+site_url: https://laissa-ugc.netlify.app
+display_url: https://laissa-ugc.netlify.app
+logo_url: /img/icone.svg
+
+media_folder: img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: portfolio
+    label: Portfólio
+    editor:
+      preview: false
+    files:
+      - name: projetos
+        label: Meus vídeos
+        file: content/projetos.json
+        fields:
+          - name: projetos
+            label: Projetos
+            label_singular: Projeto
+            widget: list
+            summary: "{{fields.titulo}} · {{fields.nicho}}"
+            hint: "O primeiro da lista aparece primeiro no site. Projeto sem vídeo fica escondido no site publicado."
+            fields:
+              - { name: titulo, label: "Título curto", widget: string }
+              - name: nicho
+                label: Nicho
+                widget: select
+                options: [Fitness, Beleza, Lifestyle, Viagens]
+              - { name: formato, label: "Formato", widget: string, required: false, hint: "Ex.: Narração em off, Câmera + narração" }
+              - { name: marca, label: "Marca que aparece no vídeo", widget: string, required: false, hint: "O site mostra: Produção independente, sem parceria com a [marca]." }
+              - name: video
+                label: "Vídeo (.mp4 vertical, até 25 MB)"
+                widget: file
+                required: false
+                media_folder: /videos
+                public_folder: /videos
+                choose_url: false
+              - name: capa
+                label: "Capa (imagem vertical 720 × 1280)"
+                widget: image
+                required: false
+                media_folder: /img/capas
+                public_folder: /img/capas
+                choose_url: false
+
+      - name: perfil
+        label: Foto e textos
+        file: content/perfil.json
+        fields:
+          - { name: foto, label: "Sua foto (vertical)", widget: image, required: false, choose_url: false }
+          - { name: fotoDescricao, label: "Descrição da foto (para acessibilidade)", widget: string, required: false }
+          - { name: frase, label: "Frase da abertura", widget: string }
+          - { name: sobre, label: "Sobre mim (deixe uma linha em branco entre os parágrafos)", widget: text }

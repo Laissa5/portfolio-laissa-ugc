@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laissa Almeida | Criadora UGC em Maceió</title>
+  <meta name="description" content="Crio vídeos UGC para as redes e os anúncios da sua marca. Fitness, beleza, lifestyle e viagens, gravados na minha rotina em Maceió/AL.">
+  <meta name="theme-color" content="#F1D08D">
+
+  <!-- Prévia do link (WhatsApp, Instagram, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Laissa Almeida | Criadora UGC">
+  <meta property="og:description" content="Crio vídeos UGC para as redes e os anúncios da sua marca.">
+  <meta property="og:image" content="https://laissa-ugc.netlify.app/img/previa-link.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://laissa-ugc.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://laissa-ugc.netlify.app/">
+
+  <link rel="icon" href="img/icone.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <div class="aviso-previa" id="aviso-previa" hidden>Prévia: os espaços tracejados só aparecem aqui e ficam ocultos no site publicado.</div>
+
+  <header class="abertura">
+    <div class="toldo" aria-hidden="true"></div>
+    <nav class="topo">
+      <a href="https://www.instagram.com/laissadaily1/" target="_blank" rel="noopener">@laissadaily1</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="abertura-grid">
+      <div class="abertura-texto">
+        <p class="rotulo entrada" style="--d:.05s">Criadora UGC · Maceió/AL</p>
+        <h1 class="entrada" style="--d:.15s">Laissa <em>Almeida</em></h1>
+        <p class="frase entrada" id="frase" style="--d:.3s">Crio vídeos UGC para as redes e os anúncios da sua marca.</p>
+        <a class="botao entrada" id="botao-abertura" href="#portfolio" style="--d:.45s"><span id="botao-abertura-texto">Ver meus vídeos</span> <span class="seta" aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="abertura-visual entrada" style="--d:.55s">
+        <div class="janela">
+          <img class="kenburns" src="img/maceio/veleiros-800.webp"
+               srcset="img/maceio/veleiros-800.webp 800w, img/maceio/veleiros-1600.webp 1600w"
+               sizes="(min-width: 720px) 50vw, 100vw"
+               alt="Veleiros no mar verde-água de Maceió" width="800" height="452">
+        </div>
+        <figure class="foto" id="foto" hidden>
+          <img id="foto-img" alt="" width="600" height="750">
+          <span class="reservado-texto">Sua foto entra aqui<br><small>vertical, luz natural</small></span>
+        </figure>
+        <span class="carimbo" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><defs><path id="circulo" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs>
+            <text><textPath href="#circulo">MACEIÓ · ALAGOAS · UGC · </textPath></text></svg>
+          <span class="carimbo-sol"></span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho">
+      <span>Fitness</span><span>Beleza</span><span>Lifestyle</span><span>Viagens</span><span>Feito em Maceió</span>
+      <span>Fitness</span><span>Beleza</span><span>Lifestyle</span><span>Viagens</span><span>Feito em Maceió</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="secao" id="portfolio" aria-labelledby="titulo-portfolio">
+      <div class="container">
+        <p class="rotulo revelar">Portfólio</p>
+        <h2 id="titulo-portfolio" class="revelar">Meus vídeos</h2>
+        <p class="intro revelar">Projetos autorais gravados com produtos da minha rotina. São produções independentes, feitas para mostrar como eu trabalho.</p>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por nicho" hidden></div>
+        <div class="grade" id="grade"></div>
+      </div>
+    </section>
+
+    <section class="secao secao-piscine" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-imagem revelar">
+          <img data-parallax="0.06" src="img/maceio/coqueiro-ipioca-600.webp"
+               srcset="img/maceio/coqueiro-ipioca-600.webp 600w, img/maceio/coqueiro-ipioca-1000.webp 1000w"
+               sizes="(min-width: 720px) 40vw, 100vw"
+               alt="Coqueiro na praia de Ipioca, em Maceió" width="600" height="900" loading="lazy">
+        </div>
+        <div class="cartao-sobre revelar">
+          <p class="rotulo">Sobre mim</p>
+          <h2 id="titulo-sobre">Oi, eu sou a Laissa</h2>
+          <div id="sobre-texto">
+            <p>Sou Laissa Almeida, pernambucana e moro em Maceió. A musculação faz parte da minha rotina, e meus interesses também passam por beleza, lifestyle e viagens.</p>
+            <p>Gosto de mostrar produtos em uso e contar a experiência do meu jeito, como se estivesse conversando com uma amiga.</p>
+          </div>
+          <ul class="nichos" aria-label="Nichos">
+            <li>Fitness</li><li>Beleza</li><li>Lifestyle</li><li>Viagens</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="formatos" aria-labelledby="titulo-formatos">
+      <div class="container">
+        <p class="rotulo revelar">Formatos</p>
+        <h2 id="titulo-formatos" class="revelar">Como eu gravo</h2>
+        <div class="formatos">
+          <article class="formato revelar" style="--d:0s">
+            <span class="formato-num">01</span>
+            <h3>Falando para a câmera</h3>
+            <p>Apresento o produto olhando para quem assiste, gravado no celular, como numa conversa entre amigas.</p>
+          </article>
+          <article class="formato revelar" style="--d:.1s">
+            <span class="formato-num">02</span>
+            <h3>Narração em off</h3>
+            <p>Cenas do produto em uso, com a minha voz contando a experiência por cima.</p>
+          </article>
+          <article class="formato revelar" style="--d:.2s">
+            <span class="formato-num">03</span>
+            <h3>Os dois juntos</h3>
+            <p>Começo falando para a câmera e sigo com cenas narradas. Bom para mostrar e explicar no mesmo vídeo.</p>
+          </article>
+        </div>
+        <div class="entrega revelar">
+          <h3>O que a sua marca recebe</h3>
+          <p>Eu produzo e entrego os vídeos para a sua marca publicar nas próprias redes ou usar em anúncios, conforme o combinado. A postagem não é feita nos meus perfis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-contato" id="contato" aria-labelledby="titulo-contato">
+      <img class="contato-fundo" data-parallax="0.08" src="img/maceio/por-do-sol-ponta-verde-800.webp"
+           srcset="img/maceio/por-do-sol-ponta-verde-800.webp 800w, img/maceio/por-do-sol-ponta-verde-1600.webp 1600w"
+           sizes="100vw" alt="" width="800" height="533" loading="lazy">
+      <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,0 L0,0 Z"/>
+      </svg>
+      <div class="container contato-conteudo">
+        <h2 id="titulo-contato" class="revelar">Vamos criar juntos?</h2>
+        <p class="intro revelar">Me conta o produto e o objetivo. Eu respondo com uma ideia de vídeo.</p>
+        <div class="contatos">
+          <a class="botao revelar" href="mailto:creatorlaissa@gmail.com?subject=Laissa%20x%20%5Bsua%20marca%5D%20%E2%80%94%20UGC">Enviar e-mail</a>
+          <p class="email-texto revelar">creatorlaissa@gmail.com</p>
+          <a class="botao botao-claro revelar" href="https://wa.me/5582993369301?text=Oi%2C%20Laissa!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20v%C3%ADdeos%20UGC." target="_blank" rel="noopener">WhatsApp <span class="botao-detalhe">(82) 99336-9301</span></a>
+          <a class="botao botao-claro revelar" href="https://www.instagram.com/laissadaily1/" target="_blank" rel="noopener">Instagram <span class="botao-detalhe">@laissadaily1</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Laissa Almeida · Criadora UGC · Maceió/AL</p>
+    <p class="creditos">Fotos de Maceió: William Freitas, Cauã Cardoso e André Magalhães, via Unsplash.</p>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
