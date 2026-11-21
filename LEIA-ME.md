@@ -8,6 +8,14 @@ Site de uma página, feito primeiro para celular, com movimentos leves e fotos d
 - **Prévia com espaços reservados:** https://laissa-ugc.netlify.app/?previa (não envie para marcas)
 - **Painel de edição:** https://laissa-ugc.netlify.app/admin (entra com o GitHub @Laissa5)
 
+> **Situação em 21/11/2026:** o painel está pronto nos arquivos, mas **ainda não está ligado**.
+> O site publicado não inclui a pasta `admin/`. Para ligar depois falta:
+> 1. Ligar o projeto `laissa-ugc` do Netlify ao repositório GitHub `Laissa5/portfolio-laissa-ugc`
+>    (Netlify → Manage → Developer settings → Link repository → GitHub). Fechar antes qualquer janela de erro antiga.
+> 2. Criar um "OAuth App" no GitHub (callback `https://api.netlify.com/auth/done`) e colar o Client ID e o Secret
+>    no Netlify (Project configuration → Access & security → OAuth → Install provider → GitHub).
+> Até lá, para colocar vídeos e fotos, envie os arquivos para o Claude, que publica por você.
+
 ## Como colocar um vídeo novo (pelo painel)
 
 1. Abra **laissa-ugc.netlify.app/admin** e clique em **Login with GitHub**.
