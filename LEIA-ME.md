@@ -1,75 +1,52 @@
 # Portfólio UGC — Laissa Almeida
 
-Site de uma página, feito primeiro para celular. Sem instalação, sem mensalidade.
+Site de uma página, feito primeiro para celular, com movimentos leves e fotos de Maceió.
 
-## Pastas
+## Endereços
+
+- **Site publicado (link para marcas e suporte):** https://laissa-ugc.netlify.app
+- **Prévia com espaços reservados:** https://laissa-ugc.netlify.app/?previa (não envie para marcas)
+- **Painel de edição:** https://laissa-ugc.netlify.app/admin (entra com o GitHub @Laissa5)
+
+## Como colocar um vídeo novo (pelo painel)
+
+1. Abra **laissa-ugc.netlify.app/admin** e clique em **Login with GitHub**.
+2. Entre em **Portfólio → Meus vídeos**.
+3. Em um projeto existente (ou em **Adicionar projeto**), preencha:
+   - **Título curto**, **Nicho** (Fitness, Beleza, Lifestyle ou Viagens), **Formato**
+   - **Marca que aparece no vídeo** (o site escreve sozinho: "Produção independente, sem parceria com a [marca]")
+   - **Vídeo**: arquivo .mp4 vertical, de preferência até 25 MB
+   - **Capa**: imagem vertical 720 × 1280
+4. Clique em **Publicar** (no topo). Em cerca de 1 minuto o site atualiza.
+
+Todo projeto aparece com o selo **Projeto autoral**. Projeto sem vídeo fica escondido no site publicado
+e aparece só na prévia (`?previa`). Para mudar a ordem, arraste os projetos na lista.
+
+## Como colocar ou trocar a sua foto e os textos
+
+Painel → **Portfólio → Foto e textos**: envie a foto vertical, ajuste a frase da abertura e o "Sobre mim"
+(deixe uma linha em branco entre os parágrafos) e clique em **Publicar**.
+Enquanto não houver foto, o espaço dela não aparece no site publicado.
+
+## Dicas para os arquivos
+
+- Vídeo: grave na vertical (9:16). Se passar de 25 MB, exporte de novo em 1080p ou use um compressor.
+- Foto: vertical, luz natural, até 1 MB.
+- Nomes de arquivo sem espaços nem acentos ajudam (ex.: `olympikus.mp4`).
+
+## Pastas do projeto
 
 | Pasta / arquivo | O que tem |
 |---|---|
-| `index.html` | A página (textos fixos: abertura, sobre mim, formatos, contato) |
-| `js/conteudo.js` | **O arquivo que você edita**: foto e lista de vídeos |
-| `css/estilo.css` | Cores e visual (paleta no topo do arquivo) |
-| `img/` | Foto, capas (`img/capas/`), ícone e imagem de prévia do link |
-| `videos/` | Seus vídeos `.mp4` |
+| `content/projetos.json` | Lista de vídeos (editada pelo painel) |
+| `content/perfil.json` | Foto, frase da abertura e Sobre mim (editados pelo painel) |
+| `index.html`, `css/`, `js/` | Layout, cores e movimentos |
+| `img/maceio/` | Fotos de Maceió (Unsplash, uso gratuito) |
+| `img/uploads/`, `img/capas/`, `videos/` | Arquivos enviados pelo painel |
+| `admin/` | Configuração do painel (Decap CMS) |
 
-Para editar, abra o arquivo no Bloco de Notas (botão direito → Abrir com → Bloco de Notas) e salve.
+## Créditos das fotos de Maceió (Licença Unsplash)
 
-## Prévia x site publicado
-
-- **Prévia**: o endereço termina em `?previa` (ex.: `https://seusite.netlify.app/?previa`).
-  Aparecem a faixa "Prévia" e os espaços tracejados da foto e dos vídeos que ainda faltam.
-- **Site publicado**: o mesmo endereço **sem** `?previa`. Os espaços tracejados somem sozinhos.
-  Enquanto não houver nenhum vídeo, a seção Portfólio fica oculta e o botão da abertura vira "Vamos criar juntos?".
-
-Envie para marcas e suporte só o endereço **sem** `?previa`.
-
-## Adicionar ou trocar a foto
-
-1. Salve a foto vertical (de preferência 1200 px de altura, até 300 KB) como `img/laissa.jpg`.
-2. Em `js/conteudo.js`, troque `foto: ""` por `foto: "img/laissa.jpg"`.
-3. Para trocar depois, substitua o arquivo com o mesmo nome. O layout não muda.
-
-## Adicionar um vídeo
-
-1. Exporte o vídeo vertical (9:16) em `.mp4`, idealmente até 20 MB. Coloque em `videos/` com um nome sem espaços nem acentos (ex.: `olympikus.mp4`).
-2. Coloque a capa (JPG vertical, 720 × 1280) em `img/capas/` (ex.: `olympikus.jpg`).
-3. Em `js/conteudo.js`, preencha o projeto:
-
-```js
-{
-  titulo: "Tênis no treino de perna",
-  nicho: "Fitness",
-  formato: "Câmera + narração",
-  marca: "Olympikus",
-  video: "videos/olympikus.mp4",
-  capa: "img/capas/olympikus.jpg"
-},
-```
-
-4. Para um projeto novo (inclusive de viagem, com `nicho: "Viagens"`), copie um bloco `{ ... },` inteiro e cole embaixo do último.
-   Todo projeto aparece com o selo **Projeto autoral** e a frase "Produção independente, sem parceria com a [marca]".
-5. Publique de novo (veja abaixo).
-
-## Endereço do site
-
-- **Site publicado (este é o link para marcas e suporte):** https://laissa-ugc.netlify.app
-- **Prévia com espaços reservados:** https://laissa-ugc.netlify.app/?previa
-- Painel (só para você, exige login): app.netlify.com → projeto `laissa-ugc`
-
-Para republicar depois de editar, o jeito mais fácil é pedir ao Claude: "publica de novo o portfólio".
-Ou pelo painel: projeto `laissa-ugc` → **Deploys** → arraste a pasta.
-
-## Publicar de graça (Netlify) — referência
-
-Primeira vez:
-1. Crie uma conta gratuita em netlify.com (pode entrar com o Google).
-2. Acesse **app.netlify.com/drop** e arraste a pasta `portfolio-laissa-ugc` inteira para a página.
-3. Em **Site configuration → Change site name**, escolha um nome, por exemplo `laissa-ugc`. O endereço fica `https://laissa-ugc.netlify.app`.
-4. O `index.html` já aponta para `laissa-ugc.netlify.app`. Se o nome do site for outro, troque esse endereço nas linhas `og:image`, `og:url` e `canonical` e publique de novo. Isso faz a imagem de prévia aparecer no WhatsApp.
-
-Para atualizar depois: no painel do site, abra **Deploys** e arraste a pasta de novo. O endereço continua o mesmo.
-
-## Antes de mandar o link
-
-- Abra o endereço (sem `?previa`) numa **janela anônima**: tem que abrir direto no portfólio, sem login.
-- No celular: dê play em cada vídeo (com som só quando você tocar), toque em **Enviar e-mail**, **WhatsApp** e **Instagram**.
+- Veleiros: William Freitas — unsplash.com/photos/ay4VdUzz0IY
+- Coqueiro em Ipioca: Cauã Cardoso — unsplash.com/photos/DLhBbEOz1uw
+- Pôr do sol na Ponta Verde: André Magalhães — unsplash.com/photos/-M2wNiEJwvU
